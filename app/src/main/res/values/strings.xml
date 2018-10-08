@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Books</string>
+    <string name="menu_search_title">Search</string>
+    <string name="empty_state">Search for a book you are interested</string>
+    <string name="network_unavailable">No network connection</string>
+    <string name="authors">Authors: %1$s</string>
+    <string name="published_date">Published Date: %1$s</string>
+    <string name="pages">Pages: %1$d</string>
+    <string name="publisher">Publisher: %1$s</string>
+    <string name="language">Language: %1$s</string>
+</resources>

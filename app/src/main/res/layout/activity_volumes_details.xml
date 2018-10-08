@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:theme="@style/Theme.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <RelativeLayout
+        android:id="@+id/details_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_margin="16dp">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="120dp"
+            android:layout_height="140dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/Base.TextAppearance.AppCompat.Body2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_gravity="center_vertical"
+            android:layout_toStartOf="@+id/icon"
+            tools:text="Book title" />
+
+        <TextView
+            android:id="@+id/authors"
+            style="@style/Base.TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/icon"
+            android:ellipsize="end"
+            android:paddingTop="8dp"
+            tools:text="Authors" />
+
+        <TextView
+            android:id="@+id/publisher"
+            style="@style/Base.TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/authors"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/icon"
+            android:ellipsize="end"
+            android:paddingTop="8dp"
+            tools:text="Publisher" />
+
+        <TextView
+            android:id="@+id/published_date"
+            style="@style/Base.TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/publisher"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/icon"
+            android:ellipsize="end"
+            android:paddingTop="8dp"
+            tools:text="Published Date" />
+
+        <TextView
+            android:id="@+id/pages"
+            style="@style/Base.TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/published_date"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/icon"
+            android:ellipsize="end"
+            android:paddingTop="8dp"
+            tools:text="Pages" />
+
+        <TextView
+            android:id="@+id/language"
+            style="@style/Base.TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pages"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/icon"
+            android:ellipsize="end"
+            android:paddingTop="8dp"
+            tools:text="Language" />
+
+        <TextView
+            android:id="@+id/link"
+            style="@style/Base.TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/language"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/icon"
+            android:autoLink="web"
+            android:ellipsize="end"
+            android:paddingTop="8dp"
+            tools:text="Link" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/errorView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:gravity="center"
+        android:text="@string/network_unavailable"
+        android:visibility="gone" />
+</RelativeLayout>
